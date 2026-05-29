@@ -1,0 +1,279 @@
+/* Custom slider styles for Player */
+input[type=range].slider-thumb {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 8px;
+  background: transparent;
+  cursor: pointer;
+}
+input[type=range].slider-thumb:focus {
+  outline: none;
+}
+input[type=range].slider-thumb::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #d4af37;
+  border: 2px solid #fff;
+  box-shadow: 0 0 2px #0008;
+  transition: background 0.2s;
+}
+input[type=range].slider-thumb:active::-webkit-slider-thumb {
+  background: #fff;
+}
+input[type=range].slider-thumb::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #d4af37;
+  border: 2px solid #fff;
+  box-shadow: 0 0 2px #0008;
+  transition: background 0.2s;
+}
+input[type=range].slider-thumb:active::-moz-range-thumb {
+  background: #fff;
+}
+input[type=range].slider-thumb::-ms-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #d4af37;
+  border: 2px solid #fff;
+  box-shadow: 0 0 2px #0008;
+  transition: background 0.2s;
+}
+input[type=range].slider-thumb:active::-ms-thumb {
+  background: #fff;
+}
+input[type=range].slider-thumb::-webkit-slider-runnable-track {
+  height: 8px;
+  border-radius: 4px;
+}
+input[type=range].slider-thumb::-ms-fill-lower {
+  background: transparent;
+}
+input[type=range].slider-thumb::-ms-fill-upper {
+  background: transparent;
+}
+input[type=range].slider-thumb:focus::-webkit-slider-thumb {
+  outline: 2px solid #d4af37;
+}
+input[type=range].slider-thumb:focus::-ms-thumb {
+  outline: 2px solid #d4af37;
+}
+input[type=range].slider-thumb:focus::-moz-range-thumb {
+  outline: 2px solid #d4af37;
+}
+
+/* Netflix-style logo load animation */
+@keyframes netflixLogoEntrance {
+  0% {
+    opacity: 0;
+    transform: translateY(-28px) scale(0.85);
+    filter: blur(14px);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(12px) scale(1.1);
+    filter: blur(0);
+  }
+  70% {
+    transform: translateY(-6px) scale(1.04);
+  }
+  100% {
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes netflixLogoGlow {
+  0%, 100% {
+    filter: drop-shadow(0 0 0px rgba(212, 175, 55, 0.75));
+  }
+  50% {
+    filter: drop-shadow(0 0 20px rgba(212, 175, 55, 0.85));
+  }
+}
+
+@keyframes netflixLogoShine {
+  0% {
+    left: -140%;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.85;
+  }
+  80% {
+    left: 140%;
+    opacity: 0;
+  }
+  100% {
+    left: 140%;
+    opacity: 0;
+  }
+}
+
+@keyframes preloaderBgPulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+.preloader-bg {
+  background: radial-gradient(circle at top, rgba(212, 175, 55, 0.2), transparent 60%),
+              radial-gradient(circle at bottom, rgba(255, 255, 255, 0.08), transparent 55%),
+              radial-gradient(circle at 40% 30%, rgba(255, 255, 255, 0.05), transparent 65%);
+  animation: preloaderBgPulse 3s ease-in-out infinite;
+}
+
+.logo-wrapper {
+  display: inline-block;
+  overflow: hidden;
+}
+
+.logo-shine {
+  position: absolute;
+  top: 0;
+  left: -140%;
+  width: 120%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent 0%, rgba(255, 255, 255, 0.9) 50%, transparent 100%);
+  transform: skewX(-22deg);
+  opacity: 0;
+  pointer-events: none;
+  animation: netflixLogoShine 1s ease-in-out 0.35s forwards;
+}
+
+.netflix-logo {
+  opacity: 0;
+  animation: netflixLogoEntrance 1s cubic-bezier(0.76, 0, 0.24, 1) forwards,
+             netflixLogoGlow 1.6s ease-in-out 0.1s both;
+}
+
+/* Audio Track Dropdown Animations */
+@keyframes fadeInZoom {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.animate-in {
+  animation: fadeInZoom 0.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+/* Custom Scrollbar for Audio Tracks */
+.scrollbar-thin::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: rgba(107, 114, 128, 0.15);
+  border-radius: 10px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: rgba(107, 114, 128, 0.8);
+  border-radius: 10px;
+  transition: background 0.3s ease;
+  border: 1px solid rgba(107, 114, 128, 0.3);
+}
+
+/* Background Parallax Animation */
+@keyframes backgroundParallax {
+  0% {
+    background-position: 40% 50%;
+    transform: scale(1);
+  }
+  50% {
+    background-position: 45% 55%;
+    transform: scale(1.05);
+  }
+  100% {
+    background-position: 40% 50%;
+    transform: scale(1);
+  }
+}
+
+.bg-parallax {
+  animation: backgroundParallax 15s ease-in-out infinite;
+  background-attachment: fixed;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background: rgba(107, 114, 128, 1);
+}
+
+/* Hide scrollbar while maintaining scrollability */
+.scrollbar-hide {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Firefox Scrollbar */
+.scrollbar-thin {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(107, 114, 128, 0.8) rgba(107, 114, 128, 0.15);
+}
+
+/* Pulse animation for selected indicator */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Player Controls Responsive */
+@media (max-width: 640px) {
+  .group-hover\:bg-black\/10 {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+}
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: inline-block;
+  border-top: 3px solid #d4af37;
+  border-right: 3px solid transparent;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

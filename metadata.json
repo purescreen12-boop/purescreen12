@@ -1,0 +1,9 @@
+
+{
+  "name": "GospelScreen TV",
+  "description": "A premium faith-based streaming platform for films, stories, and sermons with AI-powered discovery.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}

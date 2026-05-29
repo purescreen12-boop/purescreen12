@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta http-equiv="Content-Security-Policy" content="script-src 'self' https://cdn.tailwindcss.com; object-src 'none';">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PureScreen- Watch Inspiring Content & films</title>
+    <link rel="icon" href="/pure.png" height="20" width="50" />
+    <link rel="manifest" href="/site.webmanifest?v=3" />
+    <meta name="theme-color" content="#0a0a0a" />
+    <meta name="description" content="we bring your family a home of meaningful entertainment you can trust..." />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="GospelScreen" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #0a0a0a;
+        color: white;
+      }
+      .font-serif {
+        font-family: 'Cinzel', serif;
+      }
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #121212;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #333;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #444;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.11.0",
+    "@google/genai": "https://esm.sh/@google/genai@^1.34.0",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+<script>
+  if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => {
+      navigator.serviceWorker.register("/sw.js")
+        .then((registration) => {
+          console.log("ServiceWorker registered with scope:", registration.scope);
+        })
+        .catch((error) => {
+          console.log("ServiceWorker registration failed:", error);
+        });
+    });
+  }
+</script>
+<!-- 
+  OPTIONAL: Unregister Service Worker
+  Uncomment this block to completely remove the PWA and all cached data
+  Then comment out the registration script above
+  
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.getRegistrations().then(registrations => {
+        for (let registration of registrations) {
+          registration.unregister().then(() => {
+            console.log('✓ Service Worker unregistered:', registration.scope);
+          });
+        }
+      });
+      
+      // Also clear all caches
+      caches.keys().then(cacheNames => {
+        cacheNames.forEach(cacheName => {
+          caches.delete(cacheName).then(() => {
+            console.log('✓ Cache deleted:', cacheName);
+          });
+        });
+      });
+    }
+  </script>
+-->
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>

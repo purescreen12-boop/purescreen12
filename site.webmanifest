@@ -1,0 +1,84 @@
+{
+  "id": "/",
+  "name": "PureScreen",
+  "short_name": "PureScreen",
+  "description": "We bring your family a home of meaningful entertainment you can trust...",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "theme_color": "#0a0a0a",
+  "background_color": "#0a0a0a",
+  "prefer_related_applications": false,
+  "icons": [
+    {
+      "src": "/icons/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/maskable-icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/icons/maskable-icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/screenshots/screenshot-1280x720.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "PureScreen Homepage"
+    },
+    {
+      "src": "/screenshots/screenshot-720x1280.png",
+      "sizes": "720x1280",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "PureScreen Mobile View"
+    }
+  ],
+  "categories": ["entertainment", "video"],
+  "shortcuts": [
+    {
+      "name": "Browse Films",
+      "short_name": "Browse",
+      "description": "Browse our collection of faith-based films",
+      "url": "/browse",
+      "icons": [
+        {
+          "src": "/icons/shortcut-browse-192x192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "My Subscriptions",
+      "short_name": "Subscriptions",
+      "description": "Manage your subscription and account",
+      "url": "/membership",
+      "icons": [
+        {
+          "src": "/icons/shortcut-subscription-192x192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    }
+  ]
+}

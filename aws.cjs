@@ -1,0 +1,1 @@
+// aws.cjs is now obsolete. S3 upload is handled directly in backend/server.js. This file is intentionally left blank.

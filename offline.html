@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offline - GospelScreen TV</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            padding: 20px;
+        }
+
+        .offline-container {
+            text-align: center;
+            max-width: 500px;
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .offline-icon {
+            font-size: 80px;
+            margin-bottom: 30px;
+            opacity: 0.8;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            font-weight: 700;
+            background: linear-gradient(135deg, #ffffff, #cccccc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        p {
+            font-size: 1.1em;
+            color: #aaaaaa;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .logo {
+            margin-bottom: 40px;
+            font-size: 2em;
+            font-weight: 700;
+            color: #ff6b35;
+        }
+
+        button {
+            background: linear-gradient(135deg, #ff6b35, #ff5722);
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            font-size: 1em;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+            font-weight: 600;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(255, 107, 53, 0.4);
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+
+        .tips {
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 1px solid #333333;
+            text-align: left;
+        }
+
+        .tips h3 {
+            color: #ff6b35;
+            margin-bottom: 15px;
+            font-size: 0.95em;
+        }
+
+        .tips ul {
+            list-style: none;
+            color: #888888;
+            font-size: 0.9em;
+        }
+
+        .tips li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .tips li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #ff6b35;
+        }
+    </style>
+</head>
+<body>
+    <div class="offline-container">
+        <div class="logo">GospelScreen TV</div>
+        <div class="offline-icon">📡</div>
+        <h1>You're Offline</h1>
+        <p>It looks like you've lost your internet connection. Please check your network and try again when you're back online.</p>
+        
+        <button onclick="location.reload()">Retry Connection</button>
+
+        <div class="tips">
+            <h3>Quick Tips:</h3>
+            <ul>
+                <li>Check your Wi-Fi or mobile data connection</li>
+                <li>Try moving closer to your router</li>
+                <li>Restart your device if the problem persists</li>
+                <li>Previously loaded content may still be available in the cache</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
